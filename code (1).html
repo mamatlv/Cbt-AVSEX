@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CBT AVSEC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>Ujian AVSEC</h1>
+            <p>Selamat datang di Ujian Computer Based Test (CBT) AVSEC.</p>
+            <button id="start-button">Mulai Ujian</button>
+        </div>
+
+        <div id="exam-screen" class="screen">
+            <div class="header">
+                <div id="timer">Waktu: 35</div>
+                <div id="question-counter">Soal: 1 / 100</div>
+            </div>
+            <div class="question-card">
+                <h2 id="question-text"></h2>
+                <div id="options-container" class="options">
+                    <!-- Options will be loaded here by JavaScript -->
+                </div>
+                <div class="navigation-buttons">
+                    <button id="skip-button" class="btn skip">Lewati Saja</button>
+                    <button id="next-button" class="btn next">Selanjutnya</button>
+                </div>
+            </div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1>Hasil Ujian</h1>
+            <p>Jumlah Soal: <span id="total-questions-result"></span></p>
+            <p>Jawaban Benar: <span id="correct-answers"></span></p>
+            <p>Jawaban Salah: <span id="wrong-answers"></span></p>
+            <div id="wrong-answers-review" class="wrong-answers-container">
+                <h2>Review Jawaban Salah</h2>
+                <div id="wrong-answers-list"></div>
+            </div>
+            <div class="result-buttons">
+                <button id="restart-button" class="btn">Ulangi Ujian</button>
+                <button id="review-button" class="btn">Lihat Jawaban Salah</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
